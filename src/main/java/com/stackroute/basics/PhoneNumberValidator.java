@@ -20,15 +20,27 @@ public class PhoneNumberValidator {
     }
 
     public void displayResult(int result) {
-        if (result == 1) {
-            System.out.println("Valid");
-        }else {
-            System.out.println("Invalid");
+        switch (result) {
+            case 1: {
+                System.out.println("Valid");
+                break;
+            }
+            case 0: {
+                System.out.println("Invalid");
+                break;
+            }
+            default: {
+                System.out.println("Empty String");
+            }
         }
+
     }
 
     public int validatePhoneNumber(String input) {
         int countDigits = 0;
+
+        if(input.length()==0 || input==null)
+            return -1;
 
         for(char ch: input.toCharArray()){
             if(ch=='-'){
