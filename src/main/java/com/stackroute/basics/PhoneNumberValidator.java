@@ -12,6 +12,7 @@ public class PhoneNumberValidator {
         phNumVal.displayResult(
                 phNumVal.validatePhoneNumber(phNumVal.getInput())
         );
+        phNumVal.closeScanner();
 
     }
 
